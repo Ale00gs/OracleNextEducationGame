@@ -1,0 +1,43 @@
+<meta charset="UTF-8">
+<script>
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+
+    }
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+
+    }
+
+    function calculaTabuadaWhile(num) {
+
+        mostra("TABUADA DO " + num);
+        var i = 0;
+        while(i <= 10) {
+
+            mostra(num + " x " + i + " = " + (num * i)); 
+            i++;
+        }
+    }
+
+    function calculaTabuadaFor(num) {
+
+        mostra("TABUADA DO " + num);
+        for(var ini = 0 ; ini <= 10 ; ini = ini++ ) {
+
+            mostra(num + " x " + ini + " = " + (num * ini)); 
+
+        }
+    }
+
+    var numero = parseInt(prompt("Digite um número para calcular a tabuada: "));
+    var tabuada = calculaTabuadaWhile(numero);
+
+    mostra("FIM!")
+
+</script>
